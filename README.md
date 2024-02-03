@@ -1,8 +1,8 @@
-# Next.js Todo List App
+# Todo List
 
 ![Home](https://github.com/TerrenceMurray/TodoList/assets/52611990/946799e8-54d5-438b-b13a-002bbbc73c23)
 
-Welcome to the Next.js Todo List App!
+## Welcome to the Next.js Todo List App!
 
 This Todo List application is built with Next.js 14, Tailwind CSS, and Zustand, making task management efficient and seamless. With its modern stack and intuitive design, users can easily add and delete tasks, staying organized and focused on their goals.
 
