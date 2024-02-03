@@ -3,31 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--surface-background: theme(colors.white.50);
+	--surface-foreground: theme(colors.white.100);
+	--surface-tertiary: theme(colors.white.200);
+	--surface-hover: var(--foreground);
+	--surface-accent: theme(colors.purple.400);
+
+	--text-primary: theme(colors.white.950);
+	--text-secondary: theme(colors.white.400);
+	--text-accent: theme(colors.purple.400);
+	--text-invert: theme(colors.white.50);
+	--text-danger: theme(colors.red.600);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--surface-background: theme(colors.white.950);
+		--surface-foreground: theme(colors.white.800);
+		--surface-tertiary: theme(colors.white.600);
+		--surface-hover: var(--surface-foreground);
+		--surface-accent: theme(colors.purple.400);
+
+		--text-primary: theme(colors.white.50);
+		--text-secondary: theme(colors.white.400);
+		--text-accent: theme(colors.purple.400);
+		--text-invert: theme(colors.white.50);
+		--text-danger: theme(colors.red.600);
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: var(--text-primary);
+	background: var(--surface-accent);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
